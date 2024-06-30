@@ -1,0 +1,186 @@
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+     <title>Lifestyle</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/nav.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/articles.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/footer.css') }}" media="screen">
+     <link rel="icon" type="image/ico" href="{{url_for('static', filename = 'images/favicon.ico') }}">
+</head>
+<header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="/"><img src="{{url_for('static', filename = 'images/img1.png') }}" alt="Joe Care"></a>
+				</div>
+				<div class="navbar">
+					<div class="close-nav"><button>×</button></div>
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/">Articles</a></li>
+							<li><a href="/community">Femina Community</a></li>
+							<li><a href="/pcos_prediction">Have PCOS?</a></li>
+							<li><a href="/expert">Femina Experts</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="#foot">Contact</a></li>
+							<!-- 
+							{% if logged == True %}
+
+							<li><a href = "/profile">Profile</a></li>
+							<li><a href = "/logout">Logout</a></li>
+
+							{% else %}-->
+							<li><a href = "/logout">Logout</a></li>
+							{% endif %}
+						</ul>
+					</nav>
+				</div>
+				<div class="menu-bar">
+					<button><i></i></button>
+				</div>
+			</div>
+		</header>
+	<script>
+			const theBody = document.querySelector('body');
+			const openNav = document.querySelector('.menu-bar button');
+			const closeNav = document.querySelector('.close-nav button');
+			const Navbar = document.querySelector('.navbar');
+	
+			// function bodyScroll(){
+			//     if(Navbar.classList.contains('show')){
+			//         theBody.classList.add('hide-scroll');
+			//     }
+			//     else if(theBody.classList.contains('hide-scroll')){
+			//         theBody.classList.remove('hide-scroll');
+			//     }
+			// }
+	
+			function showHide(){
+				Navbar.classList.toggle('show');
+				// bodyScroll();
+			}
+	
+			openNav.onclick = showHide;
+			closeNav.onclick = showHide;
+		</script>
+
+<style>
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+
+  <h1 class="title">Lifestyle</h1>
+<div class="band">
+  <div class="item-1">
+    <a href="https://design.tutsplus.com/articles/international-artist-feature-malaysia--cms-26852" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-1.jpg);"></div>
+      <article>
+        <h1>International Artist Feature: Malaysia</h1>
+        <span>Mary Winkler</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-2">
+    <a href="https://webdesign.tutsplus.com/articles/how-to-conduct-remote-usability-testing--cms-27045" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/users-2.png);"></div>
+      <article>
+        <h1>How to Conduct Remote Usability Testing</h1>
+        <span>Harry Brignull</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://design.tutsplus.com/articles/envato-tuts-community-challenge-created-by-you-july-edition--cms-26724" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flex-5.jpg);"></div>
+      <article>
+        <h1>Created by You, July Edition</h1>
+        <p>Welcome to our monthly feature of fantastic tutorial results created by you, the Envato Tuts+ community! </p>
+        <span>Melody Nieves</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://webdesign.tutsplus.com/tutorials/how-to-code-a-scrolling-alien-lander-website--cms-26826" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/landing.png);"></div>
+      <article>
+        <h1>How to Code a Scrolling “Alien Lander” Website</h1>
+        <p>We’ll be putting things together so that as you scroll down from the top of the page you’ll see an “Alien Lander” making its way to touch down.</p>
+        <span>Kezz Bracey</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-5">
+    <a href="https://design.tutsplus.com/tutorials/stranger-things-inspired-text-effect--cms-27139" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/strange.jpg);"></div>
+      <article>
+        <h1>How to Create a “Stranger Things” Text Effect in Adobe Photoshop</h1>
+        <span>Rose</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-6">
+    <a href="https://photography.tutsplus.com/articles/5-inspirational-business-portraits-and-how-to-make-your-own--cms-27338" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/flor.jpg);"></div>
+      <article>
+        <h1>5 Inspirational Business Portraits and How to Make Your Own</h1>
+
+        <span>Marie Gardiner</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-7">
+    <a href="https://webdesign.tutsplus.com/articles/notes-from-behind-the-firewall-the-state-of-web-design-in-china--cms-22281" class="card">
+      <div class="thumb" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/china.png);"></div>
+      <article>
+        <h1>Notes From Behind the Firewall: The State of Web Design in China</h1>
+        <span>Kendra Schaefer</span>
+      </article>
+    </a>
+  </div>
+</div>
+
+<footer id="foot">
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Contact</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/k-naga-himaja/" style="color: black">Himaja</a></li>
+            <li><a href="https://www.linkedin.com/in/vasavi-siri-chandana-47a695238/" style="color: black">Siri Chandana</a></li>
+          <li><a href="https://twitter.com/KNagaHimaja" style="color: black">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Resources</h2>
+        <ul>
+          <li><a href="/" style="color: black">Home</a></li>
+          <li><a href="/query" style="color: black">Queries</a></li>
+          <li><a href="/expert" style="color: black">Expert Advice</a></li>
+          <li><a href="#foot" style="color: black">Contact</a></li>
+        </ul>
+      </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title" style="color: #42a5f5;">About us</h2>
+      <ul style="color: black"> 
+        <p style="text-align: justify;">Team CSE-B5 is a group of G Pulla Reddy Engineering College students.</p>
+        <p style="text-align: justify;">Femina Well is designed to help women of all ages understand their bodies better.</p>
+        <p style="text-align: justify;">Our dear virtual friend, Femina Bot, is here in case you need any help. </p>
+        <p style="text-align: justify;">	We hope you have an educative tour on our page. Happy Learning!</p>
+      </ul>
+    </div>
+    
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+    </ul>
+  </section>
+</footer>

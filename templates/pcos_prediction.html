@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+      <title>Femina Prediction - Do you think you have PCOS?</title>
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/nav.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/pcos_prediction.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/article_block.css') }}" media="screen">
+      <script class="u-script" type="text/javascript" src="{{url_for('static', filename = 'js/pcos_prediction.js') }}" defer=""></script>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/footer.css') }}" media="screen">
+     <link rel="icon" type="image/ico" href="{{url_for('static', filename = 'images/favicon.ico') }}">
+</head>
+<header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="/"><img src="{{url_for('static', filename = 'images/img1.png') }}" alt="Joe Care"></a>
+				</div>
+				<div class="navbar">
+					<div class="close-nav"><button>×</button></div>
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/">Articles</a></li>
+							<li><a href="/community">Femina Community</a></li>
+							<li><a href="/pcos_prediction">Have PCOS?</a></li>
+							<li><a href="/expert">Femina Experts</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="#foot">Contact</a></li>
+							<!-- 
+							{% if logged == True %}
+
+							<li><a href = "/profile">Profile</a></li>
+							<li><a href = "/logout">Logout</a></li>
+
+							{% else %}-->
+							<li><a href = "/logout">Logout</a></li>
+							{% endif %}
+						</ul>
+					</nav>
+				</div>
+				<div class="menu-bar">
+					<button><i></i></button>
+				</div>
+			</div>
+		</header>
+	<script>
+			const theBody = document.querySelector('body');
+			const openNav = document.querySelector('.menu-bar button');
+			const closeNav = document.querySelector('.close-nav button');
+			const Navbar = document.querySelector('.navbar');
+	
+			// function bodyScroll(){
+			//     if(Navbar.classList.contains('show')){
+			//         theBody.classList.add('hide-scroll');
+			//     }
+			//     else if(theBody.classList.contains('hide-scroll')){
+			//         theBody.classList.remove('hide-scroll');
+			//     }
+			// }
+	
+			function showHide(){
+				Navbar.classList.toggle('show');
+				// bodyScroll();
+			}
+	
+			openNav.onclick = showHide;
+			closeNav.onclick = showHide;
+		</script>
+
+<style>
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+<br><br><br>
+
+<div class="main">Worried about having PCOS? Take a test and find out!</div>
+
+
+
+
+
+
+<form id="regForm" action="{{ url_for('pcos_pred')}}" method="post">
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+     
+      <h1>How long does your period last?</h1>
+   <input type="radio" id="periodLen3" name="periodLen" value="3">
+  <label for="periodLen3">2-3 Days</label><br>
+  <input type="radio" id="periodLen5" name="periodLen" value="5">
+  <label for="periodLen5">4-5 Days</label><br>
+  <input type="radio" id="periodLen7" name="periodLen" value="7">
+  <label for="periodLen7">6-7 Days</label>
+  <input type="radio" id="periodLen9" name="periodLen" value="9">
+  <label for="periodLen7">More than 7 days</label>
+ 
+  </div>
+  
+  <div class="tab">
+     
+      <h1>How long does your cycle last?</h1>
+   <input type="radio" id="cycleLen22" name="cycleLen" value="22">
+  <label for="cycleLen22">20-24 Days</label><br>
+  <input type="radio" id="cycleLen25" name="cycleLen" value="25">
+  <label for="cycleLen25">20-28 Days</label><br>
+  <input type="radio" id="cycleLen27" name="cycleLen" value="27">
+  <label for="cycleLen27">25-28 Days</label>
+  <input type="radio" id="cycleLen32" name="cycleLen" value="32">
+  <label for="cycleLen32">29-35 Days</label>
+  <input type="radio" id="cycleLen37" name="cycleLen" value="37">
+  <label for="cycleLen37">36+ Days</label>
+  <input type="radio" id="cycleLen100" name="cycleLen" value="100">
+  <label for="cycleLen100">Keeps Variating</label>
+ 
+  </div>
+  
+   <div class="tab">
+      
+       <h1>How old are you?</h1>
+    <input type="radio" id="age1" name="age" value="1">
+   <label for="age1">Below 18</label><br>
+   <input type="radio" id="age2" name="age" value="2">
+   <label for="age2">18-25</label><br>
+   <input type="radio" id="age3" name="age" value="3">
+   <label for="age">25-30</label>
+   <input type="radio" id="age4" name="age" value="4">
+   <label for="age4">31-35</label>
+   <input type="radio" id="age5" name="age" value="5">
+   <label for="age5">36-40</label>
+   <input type="radio" id="age6" name="age" value="6">
+   <label for="age6">41-45</label>
+    <input type="radio" id="age7" name="age" value="7">
+    <label for="age7">Above 45</label>
+  
+   </div>
+  
+  
+  <div class="tab">
+     
+      <h1>Have you lost/gained weight in the past 6 months?</h1>
+  <input type="radio" id="overweight1" name="weightLossGain" value="1">
+  <label for="overweight1">Yes</label>
+   <input type="radio" id="overweight0" name="weightLossGain" value="0">
+   <label for="overweight0">No</label>
+  
+  </div>
+  
+  <div class="tab">
+     
+      <h1>Are you periods irregular?</h1>
+  <input type="radio" id="missedPeriod1" name="missedPeriod" value="1">
+  <label for="missedPeriod1">Yes</label>
+   <input type="radio" id="missedPeriod0" name="missedPeriod" value="0">
+   <label for="missedPeriod0">No</label>
+  
+  </div>
+  
+  <div class="tab">
+     
+      <h1>Are you facing difficulties in conceiving?</h1>
+  <input type="radio" id="diffConceive1" name="diffConceive" value="1">
+  <label for="diffConceive1">Yes</label>
+   <input type="radio" id="diffConceive0" name="diffConceive" value="0">
+   <label for="diffConceive0">No</label>
+   </div>
+   
+   <div class="tab">
+      
+       <h1>How is the hair growth on your chin?</h1>
+   <input type="radio" id="chinHair0" name="chinHair" value="0">
+   <label for="chinHair0">Normal</label>
+    <input type="radio" id="chinHair1" name="chinHair" value="1">
+    <label for="chinHair1">Moderate</label>
+    <input type="radio" id="chinHair2" name="chinHair" value="2">
+    <label for="chinHair2">Extreme</label>
+  
+  </div>
+  
+  <div class="tab">
+     
+      <h1>How is the hair growth on your cheeks?</h1>
+  <input type="radio" id="cheekHair0" name="cheekHair" value="0">
+  <label for="cheekHair0">Normal</label>
+   <input type="radio" id="cheekHair1" name="cheekHair" value="1">
+   <label for="cheekHair1">Moderate</label>
+   <input type="radio" id="cheekHair1" name="cheekHair" value="2">
+   <label for="cheekHair1">Extreme</label>
+ 
+ </div>
+ 
+ <div class="tab">
+    
+     <h1>How is the hair growth between your breasts?</h1>
+ <input type="radio" id="breastHair0" name="breastHair" value="0">
+ <label for="breastHair0">Normal</label>
+  <input type="radio" id="breastHair1" name="breastHair" value="1">
+  <label for="breastHair1">Moderate</label>
+  <input type="radio" id="breastHair2" name="breastHair" value="2">
+  <label for="breastHair2">Extreme</label>
+
+</div>
+  
+  <div class="tab">
+     
+      <h1>How is the hair growth on your upper lips?</h1>
+  <input type="radio" id="lipHair0" name="lipHair" value="0">
+  <label for="lipHair0">Normal</label>
+   <input type="radio" id="lipHair1" name="lipHair" value="1">
+   <label for="lipHair1">Moderate</label>
+   <input type="radio" id="lipHair2" name="lipHair" value="2">
+   <label for="lipHair2">Extreme</label>
+
+ </div>
+ 
+  <div class="tab">
+     
+      <h1>How is the hair growth on your arms?</h1>
+  <input type="radio" id="armHair0" name="armHair" value="0">
+  <label for="armHair0">Normal</label>
+   <input type="radio" id="armHair1" name="armHair" value="1">
+   <label for="armHair1">Moderate</label>
+   <input type="radio" id="armHair2" name="armHair" value="2">
+   <label for="armHair2">Extreme</label>
+
+ </div>
+ 
+ <div class="tab">
+    
+     <h1>How is the hair growth on your inner thighs?</h1>
+ <input type="radio" id="thighHair0" name="thighHair" value="0">
+ <label for="thighHair0">Normal</label>
+  <input type="radio" id="thighHair1" name="thighHair" value="1">
+  <label for="thighHair1">Moderate</label>
+  <input type="radio" id="thighHair2" name="thighHair" value="2">
+  <label for="thighHair1">Extreme</label>
+
+</div>
+  
+   <div class="tab">
+      
+       <h1>Do you have acne or skin tags?</h1>
+   <input type="radio" id="acne0" name="acne" value="0">
+   <label for="acne0">No</label>
+    <input type="radio" id="acne1" name="acne" value="1">
+    <label for="acne1">Yes</label>
+
+  </div>
+  
+   <div class="tab">
+      
+       <h1>Are you facing hair thinning or Hair Loss?</h1>
+   <input type="radio" id="acne0" name="acne" value="0">
+   <label for="acne0">No</label>
+    <input type="radio" id="acne1" name="acne" value="1">
+    <label for="acne1">Yes</label>
+
+  </div>
+  
+  <div class="tab">
+     
+      <h1>Do you have dark patches?</h1>
+  <input type="radio" id="darkPatch0" name="darkPatch" value="0">
+  <label for="darkPatch0">No</label>
+   <input type="radio" id="darkPatch1" name="darkPatch" value="1">
+   <label for="darkPatch1">Yes</label>
+
+ </div>
+ 
+ <div class="tab">
+    
+     <h1>Are you always tired?</h1>
+ <input type="radio" id="tired0" name="tired" value="0">
+ <label for="tired0">No</label>
+  <input type="radio" id="tired1" name="tired" value="1">
+  <label for="tired1">Yes</label>
+
+</div>
+
+ 
+ <div class="tab">
+    
+     <h1>Do you experience frequent mood swings?</h1>
+ <input type="radio" id="mood0" name="mood" value="0">
+ <label for="mood0">No</label>
+  <input type="radio" id="mood1" name="mood" value="1">
+  <label for="mood1">Yes</label>
+
+</div>
+
+ <div class="tab">
+    
+     <h1>How many days do you exercise per week?</h1>
+ <input type="radio" id="exercise0" name="exercise" value="0">
+ <label for="exercise0">0</label>
+  <input type="radio" id="exercise1" name="exercise" value="1">
+  <label for="exercise1">1</label>
+  <input type="radio" id="exercise2" name="exercise" value="2">
+  <label for="exercise2">2</label>
+  <input type="radio" id="exercise3" name="exercise" value="3">
+  <label for="exercise3">3</label>
+  <input type="radio" id="exercise4" name="exercise" value="4">
+  <label for="exercise4">4</label>
+  <input type="radio" id="exercise5" name="exercise" value="5">
+  <label for="exercise5">5</label>
+  <input type="radio" id="exercise6" name="exercise" value="6">
+  <label for="exercise6">6</label>
+  <input type="radio" id="exercise7" name="exercise" value="7">
+  <label for="exercise7">7</label>
+
+</div>
+
+ <div class="tab">
+    
+     <h1>How many days do you eat outside per week?</h1>
+ <input type="radio" id="junk0" name="junk" value="0">
+ <label for="junk0">0</label>
+  <input type="radio" id="junk1" name="junk" value="1">
+  <label for="junk1">1</label>
+  <input type="radio" id="junk2" name="junk" value="2">
+  <label for="junk2">2</label>
+  <input type="radio" id="junk3" name="junk" value="3">
+  <label for="junk3">3</label>
+  <input type="radio" id="junk4" name="junk" value="4">
+  <label for="junk4">4</label>
+  <input type="radio" id="junk5" name="junk" value="5">
+  <label for="junk5">5</label>
+  <input type="radio" id="junk6" name="junk" value="6">
+  <label for="junk6">6</label>
+  <input type="radio" id="junk7" name="junk" value="7">
+  <label for="junk8">7</label>
+
+</div>
+
+<div class="tab">
+    
+     <h1>Do you consume canned food often?</h1>
+ <input type="radio" id="canned0" name="canned" value="0">
+ <label for="canned0">No</label>
+  <input type="radio" id="canned1" name="canned" value="1">
+  <label for="canned1">Yes</label>
+
+</div>
+
+
+      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>  
+      
+  
+  
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+     <span class="step"></span>
+     <span class="step"></span>
+  </div>
+</form>
+
+
+
+
+ <div class="output">
+    
+     {% if diagnosis %}
+     <p>You may be at risk of PCOS!</p>
+     {% else %}
+     <p>You are safe and healthy!</p>
+     {% endif %}
+     
+
+</div>
+
+
+
+
+
+<br><br><br><br>
+<footer id="foot">
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Contact</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/prem-jain801/" style="color: black">Prem</a></li>
+          <li><a href="https://www.linkedin.com/in/k-naga-himaja/" style="color: black">Himaja</a></li>
+          <li><a href="https://twitter.com/KNagaHimaja" style="color: black">Twitter</a></li>
+          <li><a href="https://www.instagram.com/prem_jain_801/" style="color: black">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Resources</h2>
+        <ul>
+          <li><a href="/" style="color: black">Home</a></li>
+          <li><a href="/query" style="color: black">Queries</a></li>
+          <li><a href="/expert" style="color: black">Expert Advice</a></li>
+          <li><a href="#foot" style="color: black">Contact</a></li>
+        </ul>
+      </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title" style="color: #42a5f5;">About us</h2>
+      <ul style="color: black"> 
+        <p style="text-align: justify;">Prem and Himaja are G Pulla Reddy Engineering College students.</p>
+        <p style="text-align: justify;">Joe Care is designed to help men of all ages understand their bodies better.</p>
+        <p style="text-align: justify;">Our dear virtual friend, Joe Bot, is here in case you need any help. </p>
+        <p style="text-align: justify;">	We hope you have an educative tour on our page. Happy Learning!</p>
+      </ul>
+    </div>
+    
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+    </ul>
+  </section>
+</footer>
+</html>

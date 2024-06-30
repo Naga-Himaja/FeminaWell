@@ -1,0 +1,185 @@
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+     <title>Pregnancy</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/nav.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/articles.css') }}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'stylesheets/footer.css') }}" media="screen">
+     <link rel="icon" type="image/ico" href="{{url_for('static', filename = 'images/favicon.ico') }}">
+</head>
+<header>
+			<div class="wrapper">
+				<div class="logo">
+					<a href="/"><img src="{{url_for('static', filename = 'images/img1.png') }}" alt="Joe Care"></a>
+				</div>
+				<div class="navbar">
+					<div class="close-nav"><button>×</button></div>
+					<nav>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/">Articles</a></li>
+							<li><a href="/community">Femina Community</a></li>
+							<li><a href="/pcos_prediction">Have PCOS?</a></li>
+							<li><a href="/expert">Femina Experts</a></li>
+							<li><a href="/profile">Profile</a></li>
+							<li><a href="#foot">Contact</a></li>
+							<!-- 
+							{% if logged == True %}
+
+							<li><a href = "/profile">Profile</a></li>
+							<li><a href = "/logout">Logout</a></li>
+
+							{% else %}-->
+							<li><a href = "/logout">Logout</a></li>
+							{% endif %}
+						</ul>
+					</nav>
+				</div>
+				<div class="menu-bar">
+					<button><i></i></button>
+				</div>
+			</div>
+		</header>
+	<script>
+			const theBody = document.querySelector('body');
+			const openNav = document.querySelector('.menu-bar button');
+			const closeNav = document.querySelector('.close-nav button');
+			const Navbar = document.querySelector('.navbar');
+	
+			// function bodyScroll(){
+			//     if(Navbar.classList.contains('show')){
+			//         theBody.classList.add('hide-scroll');
+			//     }
+			//     else if(theBody.classList.contains('hide-scroll')){
+			//         theBody.classList.remove('hide-scroll');
+			//     }
+			// }
+	
+			function showHide(){
+				Navbar.classList.toggle('show');
+				// bodyScroll();
+			}
+	
+			openNav.onclick = showHide;
+			closeNav.onclick = showHide;
+		</script>
+
+<style>
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+</style>
+
+
+  <h1>Pregnancy</h1>
+<div class="band">
+  <div class="item-1">
+    <a href="https://blog.providence.org/blog/pregnancy-everything-you-need-to-know-for-your-journey" class="card">
+      <div class="thumb" style="background-image: url(https://images.healthshots.com/healthshots/en/uploads/2022/05/12104033/pregnancy-1-1600x900.jpg);"></div>
+      <article>
+        <h1>Pregnancy: Everything you need to know for your journey</h1>
+        <span></span>
+      </article>
+    </a>
+  </div>
+  <div class="item-2">
+    <a href="https://www.healthline.com/health/pregnancy#_noHeaderPrefixedContent" class="card">
+      <div class="thumb" style="background-image: url(https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2016/8/Signs_of_pregnancy_shutterstock_374397664.jpg);"></div>
+      <article>
+        <h1>What Do You Want to Know About Pregnancy?</h1>
+        <span> Holly Ernst</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-3">
+    <a href="https://www.unicef.org/parenting/child-development/what-avoid-when-pregnant" class="card">
+      <div class="thumb" style="background-image: url(https://democraticnaari.com/wp-content/uploads/2021/05/5-foods-need-to-add-in-your-diet-for-healthy-baby-during-pregnancy-and-5-food-to-avoid-democraticnaari-democratic-naari.png);"></div>
+      <article>
+        <h1>What to avoid when pregnant?</h1>
+        <p>How to keep your growing baby safe.</p>
+        <span>UNICEF</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-4">
+    <a href="https://www.medicalnewstoday.com/articles/38302#_noHeaderPrefixedContent" class="card">
+      <div class="thumb" style="background-image: url(https://americanpregnancy.org/wp-content/uploads/2022/04/early-signs-of-pregnancy.jpg);"></div>
+      <article>
+        <h1>What to expect during pregnancy?</h1>
+        <p>Pregnancy can affect each person differently. However, there are certain aspects most people can expect to experience during their pregnancy.</p>
+        <span>Stacy A. Henigsman</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-5">
+    <a href="https://my.clevelandclinic.org/health/articles/24442-pregnancy-complications" class="card">
+      <div class="thumb" style="background-image: url(https://divinemothers.in/wp-content/uploads/2021/11/istock000061841644medium.jpg);"></div>
+      <article>
+        <h1>Pregnancy Complications</h1>
+        <span></span>
+      </article>
+    </a>
+  </div>
+  <div class="item-6">
+    <a href="https://kidshealth.org/en/parents/preg-health.html" class="card">
+      <div class="thumb" style="background-image: url(https://c.ndtvimg.com/2020-10/pra4opco_pregnancy-food_625x300_09_October_20.jpg);"></div>
+      <article>
+        <h1>Staying Healthy During Pregnancy</h1>
+        <span>Elana Pearl Ben-Joseph</span>
+      </article>
+    </a>
+  </div>
+  <div class="item-7">
+    <a href="https://having-a-baby.com/awakening-the-senses-pregnancy/" class="card">
+      <div class="thumb" style="background-image: url(https://candorivf.com/wp-content/uploads/2022/03/How-Body-Changes-During-Pregnancy.png);"></div>
+      <article>
+        <h1>Awakening the Senses: Pregnancy Body Changes</h1>
+        <span>Ann Douglas</span>
+      </article>
+    </a>
+  </div>
+</div>
+
+<footer id="foot">
+  <!-- Footer main -->
+  <section class="ft-main">
+    <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Contact</h2>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/k-naga-himaja/" style="color: black">Himaja</a></li>
+            <li><a href="https://www.linkedin.com/in/vasavi-siri-chandana-47a695238/" style="color: black">Siri Chandana</a></li>
+          <li><a href="https://twitter.com/KNagaHimaja" style="color: black">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="ft-main-item">
+        <h2 class="ft-title" style="color: #42a5f5;">Resources</h2>
+        <ul>
+          <li><a href="/" style="color: black">Home</a></li>
+          <li><a href="/query" style="color: black">Queries</a></li>
+          <li><a href="/expert" style="color: black">Expert Advice</a></li>
+          <li><a href="#foot" style="color: black">Contact</a></li>
+        </ul>
+      </div>
+    <div class="ft-main-item">
+      <h2 class="ft-title" style="color: #42a5f5;">About us</h2>
+      <ul style="color: black"> 
+        <p style="text-align: justify;">Team CSE-B5 is a group of G Pulla Reddy Engineering College students.</p>
+        <p style="text-align: justify;">Femina Well is designed to help women of all ages understand their bodies better.</p>
+        <p style="text-align: justify;">Our dear virtual friend, Femina Bot, is here in case you need any help. </p>
+        <p style="text-align: justify;">	We hope you have an educative tour on our page. Happy Learning!</p>
+      </ul>
+    </div>
+    
+  </section>
+
+  <!-- Footer legal -->
+  <section class="ft-legal">
+    <ul class="ft-legal-list">
+    </ul>
+  </section>
+</footer>
