@@ -1,0 +1,77 @@
+#regForm {
+  background-color: #ffffff;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 30px;
+}
+h1{
+ font-size: 20px;
+ font-family: Raleway;
+}
+.main{
+font-size: 50px;
+font-family: Raleway;
+text-align:center;
+}
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 50%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #555151;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #fc8eac;
+}
+
+.output{
+font-size: 30px;
+font-family: Raleway;
+text-align:center;
+}
+
+button{
+width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s all;
+  background-color: linear-gradient(to right, #fbaed2, #fc8eac);
+  font-size: 1.3rem;
+  box-shadow: .25rem .25rem .3rem #555151;
+  pointer-events: auto;
+  font-family: Raleway, sans-serif;
+}
+button:hover{
+    background-color: #fbaed2;
+}
